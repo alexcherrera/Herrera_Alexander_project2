@@ -1,0 +1,73 @@
+<!doctype html>
+<!--Alexander Herrera-->
+<!--Project 1-->
+<html>
+	<head>
+		<!--Meta Tags-->
+		<meta charset ="utf-8"/>
+		<meta name="description" content="Filling in course information such as course name, dates, etc"/>
+		<meta name="keywords" content="Course Information"/>
+		<meta name="robots" content="noindex, nofollow"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width"/>
+		<!--Page Title-->
+		<title>College Life Maintence Create Profile Page</title>	
+	</head>
+	<body>
+		<header>
+			<!--Main header--> 
+			<h1>Course Information:</h1>
+		</header>
+		<form action="#" method="post">
+			<fieldset>	
+				<!--Legend Title Text--> 
+				<legend><h2>Add New Course:</h2></legend>
+				<ul>
+					<li>
+						<label for="MajorByDepartmentSchools"> Major By Department School: </label>
+					<select id="MajorByDepartmentSchools">
+						<optgroup label="College Of Architecture">
+							<option value="Architecture">Architecture</option>
+						</optgroup>
+						<optgroup label="Institute Of Arts And Sciences">
+							<option value="Biology">Biology</option>
+							<option value="Mathematics">Mathematics</option>
+						</optgroup>
+						<optgroup label="Academy Of Business">
+							<option value="Accounting">Accounting</option>	
+							<option value="Economics">Economics</option>	
+						</optgroup>
+						<optgroup label="Sciences of Engineering Institute">
+							<option value="Computer Engineering">Computer Engineering</option>	
+							<option value="Electrical Engineering">Electrical Engineering</option>
+						</optgroup>
+					</select>
+					</li>
+					<li><label for="CourseName">Course Name: </label><input type="text" id="CourseName" placeholder="example: Intro to Art"/></li>
+					<li><label for="CourseSection">Course Section: </label><input type="text" id="CourseSection" placeholder="example: ART101"/></li>
+				</ul>	
+			</fieldset>
+			<fieldset>
+				<!--Legend Title Text--> 
+				<legend><h2>Create Schedule:</h2></legend>
+				<header>	
+				<!--Inside legend-->
+					<h3>Assignments:</h3>
+				</header>
+				<ul>	
+					<li><label for="TopicandSection">Topic and Section: </label><input type="text" id="TopicandSection" placeholder="example: Sec 1.1"/></li>
+					<li><label for="TodaysDate">Today's Date: </label><input type="date" id="TodaysDate"/></li>
+					<li><label for="DueDate">Due Date: </label><input type="date" id="DueDate" placeholder="example: 1/1/11"/></li>
+					<li>Method Of Submiting Assignment:
+						<ul>
+							<li><input type="radio" checked value="Email" id="Email" name= "turnin"/><label for="Email">Email to Professor</label></li>
+							<li><input type="radio" value="Person" id="Person" name= "turnin"/><label for="Person">Turn in Person</label></li>
+						</ul>
+					<li><label for="NoteSection">Assignment Notes:</label><textarea id="NoteSection"></textarea></li>
+					<!--Hidden-->
+					<li><input type="hidden" value="true"/></li>	
+				</ul>
+			</fieldset>
+			<input type="submit" value="Submit Now!"/>
+		</form>	
+	</body>	
+</html>
