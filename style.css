@@ -1,0 +1,50 @@
+html {
+	background-color:#003F87;
+}
+h1 {
+	margin: 10px 100px;
+	padding: 5px;
+	border: 10px ridge #607B8B;
+	text-align: center;
+	background-color:#33A1DE;
+	color:#E9F5FB;
+}
+article {
+	margin:30px;
+	border:8px groove #8EA4B1;
+	padding: 0px 10px;
+	background-color: #70BDE8;
+	font-style: normal; 
+	font-variant: normal;
+	font-weight: bold; 
+	font-family: "Times New Roman";
+	color: #F0F3f5;
+}
+h2 {
+	border:6px groove #8EA4B1;
+	margin:20px 200px;
+}
+legend {
+	border-height:10px;
+	border-style: dashed;
+	border-width: 3px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-color: #888888;
+	background-color: #539DC2;
+	color: #EBF5FA;
+}
+fieldset {
+	background-color: #4DD2FF;
+}
+
+
+ul {
+	display: inline;
+
+}
+
+#CourseName {
+	display: block;
+
+}
