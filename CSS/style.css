@@ -1,0 +1,83 @@
+/*
+Alexander Herrera
+Project2
+*/
+html {
+	background-color:#003F87;
+}
+h1 {
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-left:10px;
+	padding: 5px;
+	border: 10px ridge #607B8B;
+	text-align: center;
+	background-color:#33A1DE;
+	color:#E9F5FB;
+}
+article {
+	margin:30px;
+	border:8px groove #8EA4B1;
+	padding: 0px 10px;
+	background-color: #70BDE8;
+	font-style: normal; 
+	font-variant: normal;
+	font-weight: bold; 
+	font-family: "Times New Roman";
+	color: #F0F3f5;
+}
+h2 {
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	margin-left:10px;
+	padding: 5px;
+	border:6px ridge #8EA4B1;
+	text-align: left;
+	background-color: #33A1DE;	
+	color: #F0F3f5;
+}
+a {
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left:10px;
+	border: 2px solid #000000;
+	padding: 2px;
+	color: #000000;
+	background-color: #BFCBD3;
+
+}
+fieldset {
+	background-color: #8EA4B1;
+}
+legend h2{
+	padding: 4px;
+	color: #EBF5FA;
+}
+
+#MajorByDepartmentSchools {
+	display:block;
+}
+legend h3 {
+	margin-top:20px;
+}
+#CourseName {
+	display: block;
+}
+#CourseSection {
+	display: block;
+}
+#TopicandSection {
+	display: block;
+}
+#TodaysDate {
+	display: block;
+}
+#DueDate {
+	display: block;
+}
+#NoteSection {
+	display: block;
+}
