@@ -21,30 +21,53 @@ article {
 	color: #F0F3f5;
 }
 h2 {
-	border:6px groove #8EA4B1;
-	margin:20px 200px;
+	border:6px ridge #8EA4B1;
+	margin-top: 30px;
+	margin-right: 440px;
+	margin-bottom: 30px;
+	margin-left:30px;
+	padding: 2px;
+	text-align: left;	
+	color: #F0F3f5;
+	background-color: #33A1DE;
 }
-legend {
-	border-height:10px;
-	border-style: dashed;
-	border-width: 3px;
-	border-left-width: 1px;
-	border-right-width: 1px;
-	border-color: #888888;
-	background-color: #539DC2;
-	color: #EBF5FA;
+a {
+	margin: 30px;
+	border: 2px solid #000000;
+	padding: 2px;
+	color: #000000;
+	background-color: #BFCBD3;
+
 }
 fieldset {
-	background-color: #4DD2FF;
+	background-color: #8EA4B1;
+}
+legend h2{
+	padding: 4px;
+	color: #EBF5FA;
 }
 
-
-ul {
-	display: inline;
-
+#MajorByDepartmentSchools {
+	display:block;
 }
-
+legend h3 {
+	margin-top:20px;
+}
 #CourseName {
 	display: block;
-
+}
+#CourseSection {
+	display: block;
+}
+#TopicandSection {
+	display: block;
+}
+#TodaysDate {
+	display: block;
+}
+#DueDate {
+	display: block;
+}
+#NoteSection {
+	display: block;
 }
