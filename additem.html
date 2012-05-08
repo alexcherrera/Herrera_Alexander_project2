@@ -1,6 +1,6 @@
 <!doctype html>
 <!--Alexander Herrera-->
-<!--Project 1-->
+<!--Project 2-->
 <html>
 	<head>
 		<!--Meta Tags-->
@@ -12,7 +12,7 @@
 		<!--Page Title-->
 		<title>College Life Maintence Create Profile Page</title>	
 		<!--Link CSS Style Sheet-->
-		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
 	</head>
 	<body>
 		<header>
@@ -30,7 +30,7 @@
 						<label for="MajorByDepartmentSchools"> Major By Department School: </label>
 					<select id="MajorByDepartmentSchools">
 						<optgroup label="College Of Architecture">
-							<option value="Architecture">Architecture</option>
+							<option value="Architecture">Architecture"</option>
 						</optgroup>
 						<optgroup label="Institute Of Arts And Sciences">
 							<option value="Biology">Biology</option>
@@ -60,7 +60,7 @@
 				<h3>Assignments:</h3>
 				</header>
 				<ul>	
-					<li><label for="TopicandSection">Topic and Section: </label><input type="text" id="TopicandSection" placeholder="example: Sec 1.1"/></li>
+					<li><label for="TopicAndSection">Topic and Section: </label><input type="text" id="TopicAndSection" placeholder="example: Sec 1.1"/></li>
 					<li><label for="TodaysDate">Today's Date: </label><input type="date" id="TodaysDate"/></li>
 					<li><label for="DueDate">Due Date: </label><input type="date" id="DueDate" placeholder="example: 1/1/11"/></li>
 					<li>Method Of Submiting Assignment:
@@ -72,8 +72,14 @@
 					<!--Hidden-->
 					<li><input type="hidden" value="true"/></li>	
 				</ul>
+				<nav>
+					<a href="#" id="clear">Erase Information</a>
+					<a href="#" id="display">Display Information</a>
+					<a href="file:///Users/alexcherrera/Desktop/FullSail/Month%204/Visual%20Frameworks/Herrera_Alexander_project2/additem.html" id="add" style="display:none;">Add New Assignment</a>
+				<nav>
 			</fieldset>
-			<input type="submit" value="Submit Now!"/>
+			<input type="submit" value="Save Assignment!" id="submit"/>
 		</form>	
+		<script src="js/main.js" type="text/javascript"></script>
 	</body>	
 </html>
