@@ -7,9 +7,8 @@ window.addEventListener("DOMContentLoaded", function(){
 
 //Getting the elements by id
 	function idTag(e){
-		var elementId = document.getElementById(e);
-		return elementId;
-}
+		return document.querySelector('#'+e);
+	}
 
 /*
 //Getting the element by tag name
@@ -31,15 +30,14 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	function getSelectionRadio() {
 		var buttonRadio = document.forms(0).turnin;
-		for (var i = 0; i < buttonRadio.length; i++){
-			if (buttonRadio[i].checked){
-			optionValue = buttonRadio[i].value;
+		for(var i = 0; i < buttonRadio.length; i++){
+			if(buttonRadio[i].checked){
+				optionValue = buttonRadio[i].value;
 			}
 		}
 	}
-
 var store = idTag('submit');
-store.addEventListener("click", storeInformation);
+
 
 	function storeInformation(){
 		var id                = Math.floor(Math.random()*100000001);
@@ -55,10 +53,9 @@ store.addEventListener("click", storeInformation);
 			info.note         = ["Note Section", idTag('add').value];
 		localStorage.setItem(id, JSON.stringify(info));
 		alert("Assignment Saved!!");
-
 	}
 
-var optionValue;
+//var callOptionValue = getSelectionRadio().optionValue;
 /*
 		var chooseMajorId = getId("MajorByDepartmentSchools");
 		var choiceOfArchTag = getTagName("Architecture");
@@ -162,7 +159,8 @@ var radioChoice;*/
 //linkOfClear.addEventListener("click", eraseInformation);
 //var linkOfDisplay = getId("display");
 //linkOfDisplay.addEventListener("click", retrieveInformation);
-
+var store = idTag('submit');
+store.addEventListener("click", storeInformation);
 
 
 
