@@ -6,21 +6,59 @@ Project 2
 window.addEventListener("DOMContentLoaded", function(){
 
 //Getting the elements by id
-	function idTag(e) {
+	function idTag(e){
 		var elementId = document.getElementById(e);
 		return elementId;
-
 }
 
-
+/*
 //Getting the element by tag name
-	function tagName (t) {
+	function tagName (t){
 		var tagName = document.getElementsByTagName(t);
 		return tagName;
 	}
-//Variables
+*/
 
+/*
+	function theValues (){
+		var formTag = tagName('form');
+		var selectIdInfo = idTag('majorChoice');
+		var createValue = setAttribute('value');
+		createValue.setAttribute()
 
+	}
+*/
+
+	function getSelectionRadio() {
+		var buttonRadio = document.forms(0).turnin;
+		for (var i = 0; i < buttonRadio.length; i++){
+			if (buttonRadio[i].checked){
+			optionValue = buttonRadio[i].value;
+			}
+		}
+	}
+
+var store = idTag('submit');
+store.addEventListener("click", storeInformation);
+
+	function storeInformation(){
+		var id                = Math.floor(Math.random()*100000001);
+		getSelectionRadio();
+		var info              = {};
+			info.major        = ["Major Choice", idTag('majorChoice').value];
+			info.cName        = ["Course Name", idTag('courseName').value];
+			info.cSection     = ["Course Section", idTag('courseSection').value];
+			info.topicAndSec  = ["Topic and Section", idTag('topicAndSection').value];
+			info.todaysDate   = ["Today's Date", idTag('todaysDate').value];
+			info.dueDate      = ["Due Date", idTag('dueDate').value];
+			info.option       = ["Turn In Option", optionValue];
+			info.note         = ["Note Section", idTag('add').value];
+		localStorage.setItem(id, JSON.stringify(info));
+		alert("Assignment Saved!!");
+
+	}
+
+var optionValue;
 /*
 		var chooseMajorId = getId("MajorByDepartmentSchools");
 		var choiceOfArchTag = getTagName("Architecture");
@@ -38,7 +76,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		var emailId = getId("Email");
 		var personId = getId("Person");
 		var noteSectionId = getId("NoteSection");
-*/
+
+	//Variables
+		var majorChoice = []
+		
 //Radio function
 function getRadioInput () {
 	var savedRadio = document.forms[0].turnin;
@@ -50,26 +91,25 @@ function getRadioInput () {
 }
 
 
-
-function saveInformation () {
-	var id = Math.floor(Math.random() * 10000023);
+function storeInformation () {
+	var id = Math.floor(Math.random()*10000023);
 	getRadioInput();
 
 	//Get all values from the form:
 	var store = {};
-		store.major = ["Major By Department Schools", idTag("MajorByDepartmentSchools").value];
-		store.courseName = ["Course Name", idTag("CourseName").value];
-		store.courseSection = ["Course Section", idTag("CourseSection").value];
-		store.topicAndSection = ["Topic and Section", idTag("TopicAndSection").value];
-		store.todaysDate = ["Todays Date", idTag("TodaysDate").value];
-		store.dueDate = ["Due Date ", idTag("DueDate").value];
-		store.email = ["Email", idTag("Email").value];
-		store.person = ["Person", idTag("Person").value];
+		store.major = ["Major By Department Schools", idTag('MajorByDepartmentSchools').value];
+		store.courseName = ["Course Name", idTag('CourseName').value];
+		store.courseSection = ["Course Section", idTag('CourseSection').value];
+		store.topicAndSection = ["Topic and Section", idTag('TopicAndSection').value];
+		store.todaysDate = ["Todays Date", idTag('TodaysDate').value];
+		store.dueDate = ["Due Date ", idTag('DueDate').value];
+		store.email = ["Email", emailValue];
+		store.person = ["Person", personValue.value];
 		localStorage.setItem(id, JSON.stringify(store));
 		alert("Assignments Saved!");
 }
 
-var radioChoice;
+var radioChoice;*/
 /*
 	var storeJSON = {
 			"chooseMajorId": 
@@ -114,7 +154,7 @@ var radioChoice;
 }
 */
 
-saveInformation();
+
 
 
 //Creating links and Submit events
@@ -122,15 +162,6 @@ saveInformation();
 //linkOfClear.addEventListener("click", eraseInformation);
 //var linkOfDisplay = getId("display");
 //linkOfDisplay.addEventListener("click", retrieveInformation);
-var linkOfSave = idTag("submit");
-linkOfSave.addEventListener("click", saveInformation);
-
-
-
-
-
-
-
 
 
 

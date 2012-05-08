@@ -57,27 +57,27 @@ legend h2{
 	padding: 4px;
 	color: #EBF5FA;
 }
-#MajorByDepartmentSchools {
+#majorChoice {
 	display:block;
 }
 legend h3 {
 	margin-top:20px;
 }
-#CourseName {
+#courseName {
 	display: block;
 }
-#CourseSection {
+#courseSection {
 	display: block;
 }
-#TopicAndSection {
+#topicAndSection {
 	display: block;
 }
-#TodaysDate {
+#todaysDate {
 	display: block;
 }
-#DueDate {
+#dueDate {
 	display: block;
 }
-#NoteSection {
+#noteSection {
 	display: block;
 }
