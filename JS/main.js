@@ -4,7 +4,8 @@ Project 2
 */
 
 window.addEventListener("DOMContentLoaded", function(){
-	
+	console.log("working");
+	//alert(localStorage.key(1));
 //Getting the elements by id
 	function idTag(e){
 		var tagId = document.getElementById(e);
@@ -23,6 +24,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 function saveInformation(){
 			var id                = Math.floor(Math.random()*100000001);
+		
 		getSelectionRadio();
 		var info              = {};
 			info.major        = ["Major Choice", idTag("majorChoice").value];
@@ -34,9 +36,10 @@ function saveInformation(){
 			info.option       = ["Turn In Option", optionValue];
 			info.note         = ["Note Section", idTag('add').value];
 		localStorage.setItem(id, JSON.stringify(info));
-		alert("Assignment Saved!!");
-		console.log(id);
+	//	alert("Assignment Saved!!");
+		
 }
+
 //var getStorage = localStorage.getItem(id, 'info');
 //console.log('id', JSON.parse(info));
 
