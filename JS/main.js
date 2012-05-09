@@ -7,11 +7,12 @@ window.addEventListener("DOMContentLoaded", function(){
 
 //Getting the elements by id
 	function idTag(e){
-		return document.querySelector('#'+e);
+		var tagId = document.getElementById('e');
+		return tagId;
 	}
 
 	function getSelectionRadio() {
-		var buttonRadio = document.getElement(0).turnin;
+		var buttonRadio = idTag('collegeForm').turnin;
 		for(var i = 0; i < buttonRadio.length; i++){
 			if(buttonRadio[i].checked){
 				optionValue = buttonRadio[i].value;
@@ -20,6 +21,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 var store = idTag('submit');
 store.addEventListener("click", storeInformation);
+console.log(store);
 
 	function storeInformation(){
 		var id                = Math.floor(Math.random()*100000001);
