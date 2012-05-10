@@ -8,6 +8,15 @@ For the browser I used Google Chrome, Safari web inspector hardly worked
 window.addEventListener("DOMContentLoaded", function () {
     console.log("working");
     //alert(localStorage.value(0));
+//Variables:
+    var linkOfClear = idTag("clear");
+    linkOfClear.addEventListener("click", eraseInformation);
+    var linkOfDisplay = idTag("display");
+    linkOfDisplay.addEventListener("click", getInfoToDisplay);
+    var save = idTag('submit');
+    save.addEventListener("click", saveInformation);
+    
+
 //Getting the elements by id
     function idTag (e) {
         var tagId = document.getElementById(e);
@@ -107,13 +116,6 @@ window.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-//Variables:
-    var linkOfClear = idTag("clear");
-    linkOfClear.addEventListener("click", eraseInformation);
-    var linkOfDisplay = idTag("display");
-    linkOfDisplay.addEventListener("click", getInfoToDisplay);
-    var save = idTag('submit');
-    save.addEventListener("click", saveInformation);
-    //console.log(save);
+
 
 });
