@@ -5,7 +5,7 @@ Project 2
 
 window.addEventListener("DOMContentLoaded", function(){
     console.log("working");
-    //alert(localStorage.key(1));
+    alert(localStorage.value(0));
 //Getting the elements by id
     function idTag(e){
         var tagId = document.getElementById(e);
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     }
 //var optionValue;
-function saveInformation(evt){
+function saveInformation(){//evt inside
             var id                = Math.floor(Math.random()*100000001);
         
         getSelectionRadio();
@@ -34,11 +34,12 @@ function saveInformation(evt){
             info.todaysDate   = ["Today's Date", idTag('todaysDate').value];
             info.dueDate      = ["Due Date", idTag('dueDate').value];
             info.option       = ["Turn In Option", optionValue];
-            info.note         = ["Note Section", idTag('add').value];
+            info.note         = ["Note Section", idTag('noteSection').value];
         console.log(info);
         localStorage.setItem(id, JSON.stringify(info));
-      //  alert("Assignment Saved!!");
-      evt.preventDefault();
+    //  evt.preventDefault();
+       alert("Assignment Saved!!");
+
 }
 var save = idTag('submit');
 save.addEventListener("click", saveInformation);
