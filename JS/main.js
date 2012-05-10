@@ -5,34 +5,33 @@ For the browser I used Google Chrome, Safari web inspector hardly worked
 */
 
 
-window.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function () {
     console.log("working");
     //alert(localStorage.value(0));
 //Getting the elements by id
-    function idTag(e){
+    function idTag (e) {
         var tagId = document.getElementById(e);
         return tagId;
     }
-//Create
-    function makeTag(c){
+//Create an Element 
+    function makeTag (c) {
         var createNewTag = document.createElement(c);
         return createNewTag;
     }
-    function getSelectionRadio(){
+//Radio Selection function  
+    function getSelectionRadio () {
         var buttonRadio = idTag('collegeForm').turnin;
-        for(var i = 0; i < buttonRadio.length; i++){
-            if(buttonRadio[i].checked){
+        for (var i = 0; i < buttonRadio.length; i++){
+            if (buttonRadio[i].checked){
                optionValue = buttonRadio[i].value;         
            }
         }
     }
-
-//var optionValue;
-function saveInformation(){//evt inside
-            var id                = Math.floor(Math.random()*100000001);
-        
+//To save all of the information in local storage
+    function saveInformation () {
+        var id                = Math.floor(Math.random()*1000292002);
         getSelectionRadio();
-         var info              = {};
+        var info              = {};
             info.major        = ["Major Choice:", idTag("majorChoice").value];
             info.cName        = ["Course Name:", idTag("courseName").value];
             info.cSection     = ["Course Section:", idTag('courseSection').value];
@@ -43,15 +42,11 @@ function saveInformation(){//evt inside
             info.note         = ["Note Section:", idTag('noteSection').value];
         console.log(info.value);
         localStorage.setItem(id, JSON.stringify(info));
-      //evt.preventDefault();
-       alert("Assignment Saved!!");
-
-}
-
-
-
-    function visibilityOfElement(v){//clear
-        switch(v){
+        alert("Assignment Saved!!");
+    }
+//In what way to display the local storage    
+    function visibilityOfElement (v) {
+        switch (v) {
             case "on":
                 idTag('collegeForm').style.display = "none";
                 idTag('clear').style.display = "inline";
@@ -69,24 +64,19 @@ function saveInformation(){//evt inside
                 return false;
         }
     }
-   
-function eraseInformation(){
+//Delete the information from the local Storage    
+    function eraseInformation () {
         if (localStorage.length === 0){
             alert("You haven't stored any Assignment Information!");
-
-        }else{
+        } else {
             localStorage.clear();//Delete everything in the localStorage
             alert("All of your Assignment Information have been deleted");
             window.location.reload();
             return false;//Stopping the link to go anywhere when reloaded
         }
-
-
     }
-
-
-
-    function displayCheck(){
+//Safety check 
+    function displayCheck () {
         if (localStorage.length === 0){
             alert("No Assignments have been saved!");
         }
@@ -101,7 +91,7 @@ function eraseInformation(){
         createDiv.appendChild(createRoster);
         document.body.appendChild(createDiv);
         idTag('items').style.display = "block";//Just to make sure it does display
-        for (var i = 0, w = localStorage.length; i < w; i++){
+        for (var i = 0, w = localStorage.length; i < w; i++) {
             var createFirstListTag = makeTag('li');
             createRoster.appendChild(createFirstListTag);
             var getKey = localStorage.key(i);
@@ -109,31 +99,21 @@ function eraseInformation(){
             var localStorageObject = JSON.parse(keyValue);
             var anotherUnorderListTag = makeTag('ul');
             createFirstListTag.appendChild(anotherUnorderListTag);
-            for (var s in localStorageObject){
+            for (var s in localStorageObject) {
                 var createAnotherList = makeTag('li');
                 anotherUnorderListTag.appendChild(createAnotherList);
                 var listInfoText = localStorageObject[s][0]+ " " + localStorageObject[s][1];
                 createAnotherList.innerHTML = listInfoText;
-
-
             }
-
-
-
         }
-
-
     }
-
-
-
-
-var linkOfClear = idTag("clear");
-linkOfClear.addEventListener("click", eraseInformation);
-var linkOfDisplay = idTag("display");
-linkOfDisplay.addEventListener("click", getInfoToDisplay);
-var save = idTag('submit');
-save.addEventListener("click", saveInformation);
-//console.log(save);
+//Variables:
+    var linkOfClear = idTag("clear");
+    linkOfClear.addEventListener("click", eraseInformation);
+    var linkOfDisplay = idTag("display");
+    linkOfDisplay.addEventListener("click", getInfoToDisplay);
+    var save = idTag('submit');
+    save.addEventListener("click", saveInformation);
+    //console.log(save);
 
 });
