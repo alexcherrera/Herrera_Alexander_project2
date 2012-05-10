@@ -5,7 +5,7 @@ Project 2
 
 window.addEventListener("DOMContentLoaded", function(){
     console.log("working");
-    alert(localStorage.value(0));
+   // alert(localStorage.value(0));
 //Getting the elements by id
     function idTag(e){
         var tagId = document.getElementById(e);
@@ -41,6 +41,7 @@ function saveInformation(){//evt inside
        alert("Assignment Saved!!");
 
 }
+var displayLink = idTag('displa')
 var save = idTag('submit');
 save.addEventListener("click", saveInformation);
 //console.log(save);
