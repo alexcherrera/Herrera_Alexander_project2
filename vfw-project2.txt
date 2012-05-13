@@ -1,0 +1,14 @@
+CSS/style.css
+https://github.com/alexcherrera/Herrera_Alexander_project2/blob/master/CSS/style.css
+
+JS/main.js
+https://github.com/alexcherrera/Herrera_Alexander_project2/blob/master/JS/main.js
+
+additem.html
+https://github.com/alexcherrera/Herrera_Alexander_project2/blob/master/additem.html
+
+index.html
+https://github.com/alexcherrera/Herrera_Alexander_project2/blob/master/index.htm1
+
+google docs
+https://docs.google.com/drawings/d/1H8ym0SuyxFcHxwJ3jagrlAFqy0jUgprBxajGmc3QYMA/edit

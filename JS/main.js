@@ -17,6 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
                         "Economics", 
                         "Computer Engineering", 
                         "Electrical Engineering"];
+    console.log(departmentMajors);
     var linkOfClear = idTag("clear");
     linkOfClear.addEventListener("click", eraseInformation);
     var linkOfDisplay = idTag("display");
@@ -43,36 +44,21 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 //Radio Selection function  
     function getSelectionRadio () {
-        var buttonRadio = idTag('collegeForm').turnin;
+        var buttonRadio = idTag("collegeForm").turnin;
         for (var i = 0; i < buttonRadio.length; i++){
             if (buttonRadio[i].checked){
                optionValue = buttonRadio[i].value;         
            }
         }
     }
-     function createMajorList () {
-        var getForm = tagName("form");
-        var getDepartmentsId = idTag("departments");
-        var createSelectTag = makeTag("Select");
-        createSelectTag.setAttribute("id, selectMajor");
-        for (var i = 0, l = departmentMajors.length; i < l; i++) {
-            var createOptionTag = makeTag("option");
-            var optionInArray = departmentMajors[i];
-            createOptionTag.setAttribute("value", optionInArray);
-            createOptionTag.innerHTML = optionInArray; 
-            createSelectTag.appendChild(createOptionTag);
-        }
-        getDepartmentsId.appendChild(createSelectTag);
-
-    }
-    createMajorList();
+     
 
 //To save all of the information in local storage
     function saveInformation () {
         var id                = Math.floor(Math.random()*1000292002);
         getSelectionRadio();
         var info              = {};
-            info.major        = ["Major Choice:", idTag("majorChoice").value];
+            info.major        = ["Major Choice:", idTag("selectMajor").value];
             info.cName        = ["Course Name:", idTag("courseName").value];
             info.cSection     = ["Course Section:", idTag('courseSection').value];
             info.topicAndSec  = ["Topic and Section:", idTag('topicAndSection').value];
@@ -84,6 +70,21 @@ window.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem(id, JSON.stringify(info));
         alert("Assignment Saved!!");
     }
+    function createMajorList () {
+        var getForm = tagName("form");
+        var getDepartmentsId = idTag("departments");
+        var createSelectTag = makeTag("Select");
+        createSelectTag.setAttribute("id", "selectMajor");
+        for (var i = 0, l = departmentMajors.length; i < l; i++) {
+            var createOptionTag = makeTag("option");
+            var optionInArray = departmentMajors[i];
+            createOptionTag.setAttribute("value", optionInArray);
+            createOptionTag.innerHTML = optionInArray; 
+            createSelectTag.appendChild(createOptionTag);
+        }
+        getDepartmentsId.appendChild(createSelectTag);
+    }
+   createMajorList();
 //In what way to display the local storage    
     function visibilityOfElement (v) {
         switch (v) {
