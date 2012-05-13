@@ -9,18 +9,32 @@ window.addEventListener("DOMContentLoaded", function () {
     console.log("working");
     //alert(localStorage.value(0));
 //Variables:
+    var departmentMajors = ["--Choose Major--", 
+                        "Architecture", 
+                        "Biology", 
+                        "Mathematics", 
+                        "Accounting",
+                        "Economics", 
+                        "Computer Engineering", 
+                        "Electrical Engineering"];
     var linkOfClear = idTag("clear");
     linkOfClear.addEventListener("click", eraseInformation);
     var linkOfDisplay = idTag("display");
     linkOfDisplay.addEventListener("click", getInfoToDisplay);
     var save = idTag('submit');
     save.addEventListener("click", saveInformation);
+   
     
 
 //Getting the elements by id
     function idTag (e) {
         var tagId = document.getElementById(e);
         return tagId;
+    }
+//Getting the elements by tag name
+    function tagName (n) {
+        var nameOfTag = document.getElementsByTagName(n);
+        return nameOfTag;
     }
 //Create an Element 
     function makeTag (c) {
@@ -36,6 +50,23 @@ window.addEventListener("DOMContentLoaded", function () {
            }
         }
     }
+     function createMajorList () {
+        var getForm = tagName("form");
+        var getDepartmentsId = idTag("departments");
+        var createSelectTag = makeTag("Select");
+        createSelectTag.setAttribute("id, selectMajor");
+        for (var i = 0, l = departmentMajors.length; i < l; i++) {
+            var createOptionTag = makeTag("option");
+            var optionInArray = departmentMajors[i];
+            createOptionTag.setAttribute("value", optionInArray);
+            createOptionTag.innerHTML = optionInArray; 
+            createSelectTag.appendChild(createOptionTag);
+        }
+        getDepartmentsId.appendChild(createSelectTag);
+
+    }
+    createMajorList();
+
 //To save all of the information in local storage
     function saveInformation () {
         var id                = Math.floor(Math.random()*1000292002);
@@ -118,4 +149,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
 
+
+ 
 });
